@@ -6,9 +6,9 @@ public class EventStage : MonoBehaviour
 {
     public Broker broker;
     public GameObject activeEvent;
-    GameObject shuffleDeck;
     public GameObject winWindow;
     public GameObject lossWindow;
+    GameObject shuffleDeck;
     // Start is called before the first frame update
     void Start()
     {
