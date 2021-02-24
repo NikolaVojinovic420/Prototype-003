@@ -8,7 +8,7 @@ public class EventStage : MonoBehaviour
     public GameObject activeEvent;
     public GameObject winWindow;
     public GameObject lossWindow;
-    GameObject shuffleDeck;
+    public GameObject shuffleDeck;
     // Start is called before the first frame update
     void Start()
     {

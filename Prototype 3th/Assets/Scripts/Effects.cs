@@ -12,12 +12,14 @@ public class Effects : MonoBehaviour
 
     Broker broker;
     EventStage eventStage;
+    UnitDisplay unitDisplay;
 
     // Start is called before the first frame update
     void Start()
     {
         broker = GameObject.FindWithTag("Broker").GetComponent<Broker>();
         eventStage = broker.eventStage;
+        unitDisplay = broker.unitDisplay;
     }
 
     // Update is called once per frame
@@ -28,20 +30,24 @@ public class Effects : MonoBehaviour
 
     public void Execute()
     {
-        if (win)
-            eventStage.winWindow.SetActive(true);
-
         if (loss)
             eventStage.lossWindow.SetActive(true);
+            
 
-        for (int i = 0; i < draw; i++)
-            broker.unitDisplay.Draw();
-
-        if (insertEvent != null)
-            insertEvent.transform.SetParent(eventStage.broker.decks.eventDecks.history.transform);
+        if (win)
+            eventStage.winWindow.SetActive(true);
 
         if (exhaustable)
             eventStage.Exhaust();
         else eventStage.Discard();
+
+        unitDisplay.MoveEngagedToRecovering();
+
+        if (insertEvent != null)
+            insertEvent.transform.SetParent(eventStage.broker.decks.eventDecks.history.transform);
+
+
+        for (int i = 0; i < draw; i++)
+            broker.unitDisplay.Draw();
     }
 }

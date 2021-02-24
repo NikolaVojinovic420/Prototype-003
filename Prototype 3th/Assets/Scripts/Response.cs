@@ -38,8 +38,8 @@ public class Response : MonoBehaviour
     bool Applicable()
     {
         //update sumAspect
-        broker.unitDisplay.sumAspect.Add(broker.decks.unitDecks.engaged);
-        if (aspects.Compare(broker.unitDisplay.sumAspect))
+        broker.unitDisplay.sumAspectEngaged.Add(broker.decks.unitDecks.engaged);
+        if (aspects.Compare(broker.unitDisplay.sumAspectEngaged))
             return true;
         return false;
     }
