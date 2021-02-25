@@ -67,10 +67,12 @@ public class UnitDisplay : MonoBehaviour
                 broker.decks.unitDecks.engaged.transform.transform.position.y);
         }
 
-        sumAspectEngaged.Add(broker.decks.unitDecks.engaged);
-        sumAspectVigilant.Add(broker.decks.unitDecks.vigilant);
+        sumAspectEngaged.Copy(broker.decks.unitDecks.engaged);
+        sumAspectVigilant.Copy(broker.decks.unitDecks.vigilant);
         textVigilant.GetComponent<Text>().text = $"Vigilant\n A: {sumAspectVigilant.a}\n P:{sumAspectVigilant.p}\n C:{sumAspectVigilant.c}";
         textEngaged.GetComponent<Text>().text = $"Engaged\n A: {sumAspectEngaged.a}\n P:{sumAspectEngaged.p}\n C:{sumAspectEngaged.c}";
+
+        
         //refresh display here
     }
 
@@ -81,5 +83,6 @@ public class UnitDisplay : MonoBehaviour
             broker.decks.unitDecks.engaged.transform.GetChild(i).SetParent(broker.decks.unitDecks.recovering.transform);
         }
         SortHandDeckAndDisplay();
+        broker.unitDisplay.sumAspectEngaged.Copy(broker.decks.unitDecks.engaged);
     }
 }

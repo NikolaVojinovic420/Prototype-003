@@ -7,6 +7,11 @@ public class Event : MonoBehaviour
     public EventStage eventStage;
     public Broker broker;
     public string eventName;
+
+    public GameObject resposne1;
+    public GameObject resposne2;
+    public GameObject resposne3;
+    public GameObject resposne4;
     // Start is called before the first frame update
     void Start()
     {

@@ -18,14 +18,10 @@ public class Aspects : MonoBehaviour
         
     }
 
-    public bool Compare(Aspects asp)
-    {
-        if(a <= asp.a && p <= asp.p && c <= asp.c)
-            return true;
-        return false;
-    }
-    
-    public void Add(GameObject deck) // this reset aspect
+    public bool CanPay(Aspects asp) => (a >= asp.a && p >= asp.p && c >= asp.c);
+  
+   
+    public void Copy(GameObject deck) // this reset aspect
     {
         a = 0;
         p = 0;

@@ -24,11 +24,8 @@ public class Unit : MonoBehaviour
     public void EnageDisengage()
     {
         if (gameObject.transform.parent.gameObject == broker.decks.unitDecks.vigilant)
-        {
             gameObject.transform.SetParent(broker.decks.unitDecks.engaged.transform);
-        }
-        else
-            gameObject.transform.SetParent(broker.decks.unitDecks.vigilant.transform);
+        else gameObject.transform.SetParent(broker.decks.unitDecks.vigilant.transform);
 
         unitDisplay.SortHandDeckAndDisplay();
     }

@@ -7,7 +7,7 @@ public class Response : MonoBehaviour
     public string responseName;
     public Broker broker;
 
-    public Aspects aspects;
+    public Aspects req;
     public Effects effects;
 
     //add clickable / or different color etc...
@@ -35,13 +35,6 @@ public class Response : MonoBehaviour
         if(Applicable())
         effects.Execute();
     }
-    bool Applicable()
-    {
-        //update sumAspect
-        broker.unitDisplay.sumAspectEngaged.Add(broker.decks.unitDecks.engaged);
-        if (aspects.Compare(broker.unitDisplay.sumAspectEngaged))
-            return true;
-        return false;
-    }
+    bool Applicable() => broker.unitDisplay.sumAspectEngaged.CanPay(req);
 
 }
