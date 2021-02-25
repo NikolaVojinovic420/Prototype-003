@@ -6,7 +6,6 @@ public class Event : MonoBehaviour
 {
     public EventStage eventStage;
     public Broker broker;
-    public string eventName;
 
     public GameObject resposne1;
     public GameObject resposne2;

@@ -59,6 +59,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responseName: 
+  broker: {fileID: 0}
+  req: {fileID: 0}
+  effects: {fileID: 0}
 --- !u!1 &7615327622682592847
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responseName: 
+  broker: {fileID: 0}
+  req: {fileID: 0}
+  effects: {fileID: 0}
 --- !u!1 &7615327622857167503
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responseName: 
+  broker: {fileID: 0}
+  req: {fileID: 0}
+  effects: {fileID: 0}
 --- !u!1 &7615327623173831773
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responseName: 
+  broker: {fileID: 0}
+  req: {fileID: 0}
+  effects: {fileID: 0}
 --- !u!1 &7615327623188943041
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +617,7 @@ GameObject:
   - component: {fileID: 7615327623542693370}
   - component: {fileID: 7615327623542693371}
   - component: {fileID: 7615327623542693368}
+  - component: {fileID: 5596987442784934396}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -693,6 +706,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5596987442784934396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615327623542693369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1be444288160c747aef4dd8445ee696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventStage: {fileID: 0}
+  broker: {fileID: 0}
+  eventName: 
+  resposne1: {fileID: 7615327622904898864}
+  resposne2: {fileID: 7615327622666711968}
+  resposne3: {fileID: 7615327622682592847}
+  resposne4: {fileID: 7615327623173831773}
 --- !u!1 &7615327623669530222
 GameObject:
   m_ObjectHideFlags: 0
